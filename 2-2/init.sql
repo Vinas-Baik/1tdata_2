@@ -22,3 +22,10 @@ CREATE TABLE Publish_Houses (
 	id_publish_house INT PRIMARY KEY, 
 	city VARCHAR(50)
 	);
+
+
+CREATE TABLE Issuance_books (
+	id_Issuance_book INT PRIMARY KEY, 
+	id_book INT, 
+	id_reader INT
+	);
