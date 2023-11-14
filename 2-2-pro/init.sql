@@ -23,8 +23,21 @@ CREATE TABLE Publish_Houses (
 	city VARCHAR(50)
 	);
 
+CREATE TABLE Author (
+	id_Author INT PRIMARY KEY, 
+	fio VARCHAR(100),
+	birthday DATETIME,
+	about VARCAHR(255)
+	);
+
 CREATE TABLE Issuance_books (
 	id_Issuance_book INT PRIMARY KEY, 
 	id_book INT, 
 	id_reader INT
+	);
+
+CREATE TABLE Аuthors_book (
+	id_Аuthors_book INT PRIMARY KEY, 
+	id_book INT, 
+	id_Author INT
 	);
