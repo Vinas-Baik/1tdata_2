@@ -1,0 +1,17 @@
+version: "2.2.pro"
+services:
+ db:
+  image: postgres:latest
+  ports:
+    - 5422:5422
+  environment:
+    POSTGRES_USER: 1tdata
+    POSTGRES_PASSWORD: postgres
+    POSTGRES_DB: 1tdata22pro
+  volumes:
+    - ./init.sql:/docker-entrypoint-initdb.d/init.sql	
+  healthcheck:
+    test: ["CMD", "ps_isready", "-U", "1tdata"]
+    interval: 5s
+    retries: 5
+  restart: always
